@@ -52,6 +52,8 @@ def get_data_and_make_chart():
     # reset dataframe index and change date column type
     df.reset_index(inplace=True)
     df["Date"] = pd.to_datetime(df["Date"]).dt.date
+    # reverse dataframe
+    df = df.iloc[::-1]
 
     # create chart
     if not df.empty:
