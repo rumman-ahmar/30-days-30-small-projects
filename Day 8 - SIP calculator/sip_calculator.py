@@ -6,10 +6,10 @@ import plotly.express as px
 st.header("SIP Calculator")
 
 # create input boxes to take the inputs from the user/frontend
-# get the montly amount
+# get the monthly amount
 monthly_amount = st.number_input('Monthly Investment', value=500)
 # get the expected yearly return
-yearly_return = st.number_input('Exprcted return rate (p.a)', value=15)
+yearly_return = st.number_input('Expected return rate (p.a)', value=15)
 # get the time period of the investment
 time_period = st.number_input('Time period', value=10)
 
