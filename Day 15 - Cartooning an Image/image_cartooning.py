@@ -10,9 +10,9 @@ gray = cv2.medianBlur(gray, 5)
 edges = cv2.adaptiveThreshold(
     gray, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 9, 9
 )
+color = cv2.bilateralFilter(img, 9, 300, 300)
 
 # Apply the Cartoon Effect
-color = cv2.bilateralFilter(img, 9, 300, 300)
 cartoon = cv2.stylization(color, sigma_s=150, sigma_r=0.25)
 
 # save and show image
